@@ -1,0 +1,106 @@
+body {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/356/original/sky-picture.jpg?1664725523);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0;
+}
+
+ul {
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  color: #fff9f9;
+  font-size: 16px;
+  font-weight: 245;
+  height: 19px;
+  line-height: 1;
+}
+.button {
+  cursor: pointer;
+  background: #390dd8;
+}
+button ::before {
+  color: #390dd8;
+  opacity: 1;
+}
+.search-form {
+  margin-bottom: 20px;
+}
+
+.search-bar ::after {
+  font-size: 14px;
+  opacity: 0.5;
+  border: solid;
+}
+.weather-app {
+  background-color: transparent;
+  position: relative;
+  display: block;
+  border: 1px solid #c7c7c7;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.weather-icon {
+  height: 64px;
+  width: 64px;
+}
+
+.temperature {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.fahrenheit-knob {
+  color: #ffffff;
+  font-size: 12px;
+}
+.celsius-knob {
+  color: #ffffff;
+  font-size: 11px;
+}
+.units {
+  position: relative;
+  top: -34px;
+  color: #ffffff;
+  font-size: 12px;
+}
+.date-time {
+  color: #ffffff;
+  font-size: 12px;
+}
+.card-monday,
+.card-tuesday,
+.card-wednesday,
+.card-thursday,
+.card-friday {
+  border: #c7c7c7;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0 auto;
+  height: 125px;
+}
+.card-monday:hover,
+.card-tuesday:hover,
+.card-wednesday:hover,
+.card-thursday:hover,
+.card-friday:hover {
+  cursor: pointer;
+  background-color: rgb(215, 157, 241);
+  transition: all 200ms ease-in-out;
+  opacity: 0.5;
+}
