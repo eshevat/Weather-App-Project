@@ -82,6 +82,10 @@ button ::before {
   color: #ffffff;
   font-size: 12px;
 }
+.furture-weather {
+  text-align: center;
+  padding: 20px auto;
+}
 .card-monday,
 .card-tuesday,
 .card-wednesday,
