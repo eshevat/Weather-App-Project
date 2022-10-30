@@ -98,7 +98,7 @@ button ::before {
   display: block;
   text-align: center;
   padding: 10px 15px 10px 15px;
-  border-radius: 10px 5px 10px 5px;
+  border-radius: 20px 20px 20px 20px;
   margin: 20px 50px 20px 50px;
   height: 125px;
   width: fit-content;
