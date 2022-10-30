@@ -104,7 +104,6 @@ button ::before {
   width: fit-content;
 }
 .weekday-container {
-  display: inline;
   text-align: center;
   max-width: 100px;
 }
