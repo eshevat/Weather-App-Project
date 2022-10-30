@@ -103,15 +103,4 @@ button ::before {
   margin: 0 auto;
   height: 125px;
 }
-.card-monday:hover,
-.card-tuesday:hover,
-.card-wednesday:hover,
-.card-thursday:hover,
-.card-friday:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  transition: all 200ms ease-in-out;
-  opacity: 0.5;
-}
+
