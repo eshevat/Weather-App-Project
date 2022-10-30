@@ -48,7 +48,6 @@ button ::before {
   backdrop-filter: blur(10px);
   position: relative;
   display: block;
-  border: 1px solid #c7c7c7;
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
