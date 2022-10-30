@@ -91,6 +91,9 @@ button ::before {
 .card-wednesday,
 .card-thursday,
 .card-friday {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border: #c7c7c7;
   text-align: center;
   padding: 5px;
@@ -104,7 +107,9 @@ button ::before {
 .card-thursday:hover,
 .card-friday:hover {
   cursor: pointer;
-  background-color: rgb(215, 157, 241);
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   transition: all 200ms ease-in-out;
   opacity: 0.5;
 }
