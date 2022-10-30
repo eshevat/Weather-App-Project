@@ -96,11 +96,15 @@ button ::before {
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: #c7c7c7;
   text-align: center;
   padding: 5px;
   border-radius: 10px;
   margin: 0 auto;
   height: 125px;
+  width: fit-content;
 }
-
+.weekday-container {
+  display: inline;
+    text-align: center;
+    max-width: 100px;
+}
