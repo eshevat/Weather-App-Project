@@ -56,6 +56,20 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function searchLocation(position) {
+  let apiKey = "c5f0e59acac64258bb92ed027d20c68f";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -77,3 +91,5 @@ celsiusTemperature.addEventListener("click", convertToCelsius);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("click", handleSubmit);
 
+
+searchCity("New York");
