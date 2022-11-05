@@ -39,7 +39,7 @@ function displayWeatherCondition(response) {
 
 function searchCity(city) {
   let apiKey = "c5f0e59acac64258bb92ed027d20c68f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York,us&appid=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
