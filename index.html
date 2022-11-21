@@ -11,130 +11,74 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
-    <title>SheCodes|Weather App</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city..."
-                class="form-control shadow-sm search-bar"
-                id="city-input"
-                autofocus="on"
-              />     
-            </div>  
-            <div class="col-3 search-button">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-                id="city-input"
-              />
-            </div>  
-          </div>
-        </form>
-        <h1 id="city"></h1>
-        <ul>
-          <li>Last updated: <span id="date"></span></li>
-          <li id="description">
-          </li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="Cloudy icon"
-                id="icon"
-                class="float-left"
-              />
-              <div class="float-left temperature current-temp">
-                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                <a href="#" id="fahrenheit" class="fahrenheit-knob">°F</a> | 
-                <a href="#" id="celsius" class="celsius-knob">°C</a>
-              </span>
+      <div class="weather-app-wrapper weather-container">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3 search-bar">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
               </div>
             </div>
-          </div>
-        <div class="col-6">
-          <div>
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li>
-                Humidity:<span id="humidity"> % </span>
-              </li>
-              <li>
-                Wind:<span id="wind"> Km/H </span>
-              </li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
-          </div>      
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: 45<span id="humidity"></span>%</li>
+                <li>Wind: 16 <span id="wind"></span>km/h</li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <div class="weather-forecast" id="forecast"></div>
         </div>
+        <small>
+          <a
+            href="https://github.com/eshevat/Vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Elysia Shevat-McBroom
+        </small>
       </div>
     </div>
-    <hr />
-    <div class="weekday-container">
-      <div class="row future-weather">
-        <div class="col card p-2 mt-3">
-          <div class="card-monday card-body">
-            <h5 class="card-title">Monday</h5>
-            <p class="card-text">
-                🌨
-            </p>
-          </div>
-        </div>
-
-        <div class="col card p-2 mt-3">
-          <div class="card-tuesday card-body">
-            <h5 class="card-title">Tuesday</h5>
-            <p class="card-text">
-                🌤
-            </p>
-          </div>
-        </div>
-
-        <div class="col card p-2 mt-3">
-          <div class="card-wednesday card-body">
-            <h5 class="card-title">Wednesday</h5>
-            <p class="card-text">
-              🌧
-            </p>
-          </div>
-        </div>
-
-        <div class="col card p-2 mt-3">
-          <div class="card-thursday card-body">
-            <h5 class="card-title">Thursday</h5>
-            <p class="card-text">
-                ⛈
-            </p>
-          </div>
-        </div>
-
-        <div class="col card p-2 mt-3">
-          <div class="card-friday card-body">
-            <h5 class="card-title">Friday</h5>
-            <p class="card-text">
-                🌦
-            </p>
-          </div>
-        </div>
-       </div>
-       <small>
-        <a href="https://github.com/eshevat/Weather-App-Project">Open-source code</a>, by Elysia Shevat-McBroom
-       </small>
-      </div>
-    <script>
-      function showPosition(position) {
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
-      }
-      navigator.geolocation.getCurrentPosition(showPosition);
-    </script>
-    <script src="src/index.js"></script>
+    <script src="SheCodes +Project/src/app.js"></script>
   </body>
 </html>
