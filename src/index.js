@@ -61,7 +61,7 @@ function getForecast(coordinates) {
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
+  let cityElement = document.querySelector("#city-input");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -93,8 +93,8 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
+  let cityElement = document.querySelector("#city-input").value;
+  searchCity(city);
 }
 
 function displayFahrenheitTemperature(event) {
