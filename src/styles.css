@@ -59,3 +59,8 @@ li:first-letter {
 .weather-forecast-temperature-min {
   opacity: 0.3;
 }
+
+.current-weather {
+  font-size: 50px;
+  font-weight: 300;
+}
